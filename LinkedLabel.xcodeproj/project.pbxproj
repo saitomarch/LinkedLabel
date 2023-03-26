@@ -6,13 +6,44 @@
 	objectVersion = 56;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		9D677F0829CE802000C6C52B /* SwiftLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 9D677F0B29CE802000C6C52B /* Build configuration list for PBXAggregateTarget "SwiftLint" */;
+			buildPhases = (
+				9D677F0C29CE822600C6C52B /* SwiftLint */,
+			);
+			dependencies = (
+			);
+			name = SwiftLint;
+			productName = SwiftLint;
+		};
+		9D677F0F29CE836800C6C52B /* SwiftLint (autocorrect) */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 9D677F1129CE836800C6C52B /* Build configuration list for PBXAggregateTarget "SwiftLint (autocorrect)" */;
+			buildPhases = (
+				9D677F1029CE836800C6C52B /* SwiftLint (autocorrect) */,
+			);
+			dependencies = (
+			);
+			name = "SwiftLint (autocorrect)";
+			productName = SwiftLint;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
+		7248EB062F3AB938A16B8740 /* Pods_LinkedLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3F17208B7CFDACE31D71A9 /* Pods_LinkedLabel.framework */; };
 		9D677F0029C000D100C6C52B /* LinkedLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D677EFF29C000D100C6C52B /* LinkedLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D677F0729C000EC00C6C52B /* LinkedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D677F0629C000EC00C6C52B /* LinkedLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16B01788DAF642F5978A07AF /* Pods-LinkedLabel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkedLabel.release.xcconfig"; path = "Target Support Files/Pods-LinkedLabel/Pods-LinkedLabel.release.xcconfig"; sourceTree = "<group>"; };
+		646DD7C4EFDE406D283E5934 /* Pods-LinkedLabel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkedLabel.debug.xcconfig"; path = "Target Support Files/Pods-LinkedLabel/Pods-LinkedLabel.debug.xcconfig"; sourceTree = "<group>"; };
 		9D677EFC29C000D100C6C52B /* LinkedLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LinkedLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D677EFF29C000D100C6C52B /* LinkedLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedLabel.h; sourceTree = "<group>"; };
+		9D677F0629C000EC00C6C52B /* LinkedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedLabel.swift; sourceTree = "<group>"; };
+		DA3F17208B7CFDACE31D71A9 /* Pods_LinkedLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LinkedLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -20,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7248EB062F3AB938A16B8740 /* Pods_LinkedLabel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -31,6 +63,8 @@
 			children = (
 				9D677EFE29C000D100C6C52B /* LinkedLabel */,
 				9D677EFD29C000D100C6C52B /* Products */,
+				B78A8C21C0C605A9B56689DB /* Pods */,
+				BEE2B7F451EC315C41BA121D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -45,9 +79,27 @@
 		9D677EFE29C000D100C6C52B /* LinkedLabel */ = {
 			isa = PBXGroup;
 			children = (
+				9D677F0629C000EC00C6C52B /* LinkedLabel.swift */,
 				9D677EFF29C000D100C6C52B /* LinkedLabel.h */,
 			);
 			path = LinkedLabel;
+			sourceTree = "<group>";
+		};
+		B78A8C21C0C605A9B56689DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				646DD7C4EFDE406D283E5934 /* Pods-LinkedLabel.debug.xcconfig */,
+				16B01788DAF642F5978A07AF /* Pods-LinkedLabel.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BEE2B7F451EC315C41BA121D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA3F17208B7CFDACE31D71A9 /* Pods_LinkedLabel.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -68,6 +120,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D677F0329C000D100C6C52B /* Build configuration list for PBXNativeTarget "LinkedLabel" */;
 			buildPhases = (
+				D3894321A78A4A80E16AA9B1 /* [CP] Check Pods Manifest.lock */,
 				9D677EF729C000D100C6C52B /* Headers */,
 				9D677EF829C000D100C6C52B /* Sources */,
 				9D677EF929C000D100C6C52B /* Frameworks */,
@@ -90,8 +143,13 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1420;
+				ORGANIZATIONNAME = "Project Flora";
 				TargetAttributes = {
 					9D677EFB29C000D100C6C52B = {
+						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
+					};
+					9D677F0829CE802000C6C52B = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
@@ -110,6 +168,8 @@
 			projectRoot = "";
 			targets = (
 				9D677EFB29C000D100C6C52B /* LinkedLabel */,
+				9D677F0829CE802000C6C52B /* SwiftLint */,
+				9D677F0F29CE836800C6C52B /* SwiftLint (autocorrect) */,
 			);
 		};
 /* End PBXProject section */
@@ -124,11 +184,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9D677F0C29CE822600C6C52B /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		9D677F1029CE836800C6C52B /* SwiftLint (autocorrect) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftLint (autocorrect)";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" --autocorrect\n";
+		};
+		D3894321A78A4A80E16AA9B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LinkedLabel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9D677EF829C000D100C6C52B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D677F0729C000EC00C6C52B /* LinkedLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +308,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -241,6 +365,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -252,9 +378,11 @@
 		};
 		9D677F0429C000D100C6C52B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 646DD7C4EFDE406D283E5934 /* Pods-LinkedLabel.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 0.0.1;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = WT6BA589VL;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -263,7 +391,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
@@ -273,13 +401,16 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.project-flora.LinkedLabel";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = auto;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -287,9 +418,11 @@
 		};
 		9D677F0529C000D100C6C52B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16B01788DAF642F5978A07AF /* Pods-LinkedLabel.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 0.0.1;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = WT6BA589VL;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -298,7 +431,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
@@ -308,15 +441,53 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.project-flora.LinkedLabel";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = auto;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9D677F0929CE802000C6C52B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WT6BA589VL;
+				PODS_ROOT = "${SRCROOT}/Pods";
+			};
+			name = Debug;
+		};
+		9D677F0A29CE802000C6C52B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WT6BA589VL;
+				PODS_ROOT = "${SRCROOT}/Pods";
+			};
+			name = Release;
+		};
+		9D677F1229CE836800C6C52B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WT6BA589VL;
+				PODS_ROOT = "${SRCROOT}/Pods";
+			};
+			name = Debug;
+		};
+		9D677F1329CE836800C6C52B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WT6BA589VL;
+				PODS_ROOT = "${SRCROOT}/Pods";
 			};
 			name = Release;
 		};
@@ -337,6 +508,24 @@
 			buildConfigurations = (
 				9D677F0429C000D100C6C52B /* Debug */,
 				9D677F0529C000D100C6C52B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D677F0B29CE802000C6C52B /* Build configuration list for PBXAggregateTarget "SwiftLint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D677F0929CE802000C6C52B /* Debug */,
+				9D677F0A29CE802000C6C52B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D677F1129CE836800C6C52B /* Build configuration list for PBXAggregateTarget "SwiftLint (autocorrect)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D677F1229CE836800C6C52B /* Debug */,
+				9D677F1329CE836800C6C52B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
