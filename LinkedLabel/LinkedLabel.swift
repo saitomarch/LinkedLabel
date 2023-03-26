@@ -3,6 +3,7 @@
 //  LinkedLabel
 //
 //  Created by SAITO Tomomi on 2023/03/14.
+//  Copyright © Project Flora. All rights reserved.
 //
 
 import UIKit
@@ -69,8 +70,24 @@ import UIKit
     ///   - url: An URL
     ///   - text: A text which should be enabled link
     @objc open func addLink(url: URL, rangeOf text: String) {
+        add(textLinks: [.init(url: url, text: text)])
         guard let string = attributedText?.string as? NSString else { return }
         addLink(url: url, range: string.range(of: text))
+    }
+    
+    /// Adds multiple links to the label with texts
+    ///
+    /// This method is can be used only in Swift.
+    ///
+    /// - parameter textLinks: An array of `TextLink`.
+    open func add(textLinks: [TextLink]) {
+        guard let text = attributedText?.string as? NSString else { return }
+        let rangeLinks: [RangeLink] = textLinks.compactMap { link in
+            let range = text.range(of: link.text)
+            guard range.location != NSNotFound else { return nil }
+            return .init(url: link.url, range: range)
+        }
+        add(rangeLinks: rangeLinks)
     }
 
     /// Adds a link to the label with a range
@@ -78,8 +95,19 @@ import UIKit
     ///   - url: An URL
     ///   - text: A range which should be enabled link
     @objc open func addLink(url: URL, range: NSRange) {
+        add(rangeLinks: [.init(url: url, range: range)])
+    }
+    
+    /// Adds multiple links to the label with ranges
+    ///
+    /// This method is can be used only in Swift.
+    ///
+    /// - parameter rangeLinks: An array of `RangeLink`.
+    open func add(rangeLinks: [RangeLink]) {
         guard let tempAttributedText = attributedText?.mutableCopy() as? NSMutableAttributedString else { return }
-        tempAttributedText.addAttributes([.link: url], range: range)
+        rangeLinks.forEach { link in
+            tempAttributedText.addAttributes([.link: link.url], range: link.range)
+        }
         attributedText = tempAttributedText
     }
 

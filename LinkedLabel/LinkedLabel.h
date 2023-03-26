@@ -3,6 +3,7 @@
 //  LinkedLabel
 //
 //  Created by SAITO Tomomi on 2023/03/14.
+//  Copyright © Project Flora. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

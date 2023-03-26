@@ -35,6 +35,8 @@
 		7248EB062F3AB938A16B8740 /* Pods_LinkedLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3F17208B7CFDACE31D71A9 /* Pods_LinkedLabel.framework */; };
 		9D677F0029C000D100C6C52B /* LinkedLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D677EFF29C000D100C6C52B /* LinkedLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D677F0729C000EC00C6C52B /* LinkedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D677F0629C000EC00C6C52B /* LinkedLabel.swift */; };
+		9D677F1529CFFFEA00C6C52B /* TextLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D677F1429CFFFEA00C6C52B /* TextLink.swift */; };
+		9D677F1729D0017D00C6C52B /* RangeLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D677F1629D0017D00C6C52B /* RangeLink.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		9D677EFC29C000D100C6C52B /* LinkedLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LinkedLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D677EFF29C000D100C6C52B /* LinkedLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedLabel.h; sourceTree = "<group>"; };
 		9D677F0629C000EC00C6C52B /* LinkedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedLabel.swift; sourceTree = "<group>"; };
+		9D677F1429CFFFEA00C6C52B /* TextLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLink.swift; sourceTree = "<group>"; };
+		9D677F1629D0017D00C6C52B /* RangeLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeLink.swift; sourceTree = "<group>"; };
 		DA3F17208B7CFDACE31D71A9 /* Pods_LinkedLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LinkedLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -81,6 +85,8 @@
 			children = (
 				9D677F0629C000EC00C6C52B /* LinkedLabel.swift */,
 				9D677EFF29C000D100C6C52B /* LinkedLabel.h */,
+				9D677F1429CFFFEA00C6C52B /* TextLink.swift */,
+				9D677F1629D0017D00C6C52B /* RangeLink.swift */,
 			);
 			path = LinkedLabel;
 			sourceTree = "<group>";
@@ -251,6 +257,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D677F0729C000EC00C6C52B /* LinkedLabel.swift in Sources */,
+				9D677F1729D0017D00C6C52B /* RangeLink.swift in Sources */,
+				9D677F1529CFFFEA00C6C52B /* TextLink.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
