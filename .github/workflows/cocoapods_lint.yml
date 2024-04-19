@@ -1,0 +1,36 @@
+name: Run CocoaPods lint
+
+on:
+  push:
+    tags:
+      - v*
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  cocoapods_lint:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Set Ruby version
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '3.0'
+      - name: Cache RubyGems bundles
+        uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gem-
+      - name: Install RubyGems
+        run:
+          bundle install --path=vendor/bundle
+      - name: Run CocoaPods lint
+        run: |
+          bundle exec pod spec lint
