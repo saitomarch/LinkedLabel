@@ -11,5 +11,7 @@ warn("Big PR") if git.lines_of_code > 500
 # github comment settings
 github.dismiss_out_of_range_messages
 
+swiftlint.config_file = '.swiftlint.yml'
+swiftlint.dircetory = 'LinkedLabel'
 swiftlint.binary_path = './Pods/SwiftLint/swiftlint'
 swiftlint.lint_files inline_mode: true
