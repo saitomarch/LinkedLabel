@@ -9,7 +9,7 @@ warn("PR is classed as Work in Progress") if github.pr_title.include? "[WIP]"
 warn("Big PR") if git.lines_of_code > 500
 
 # github comment settings
-github.dismiss_out_of_range_messages
+# github.dismiss_out_of_range_messages
 
 swiftlint.config_file = '.swiftlint.yml'
 swiftlint.binary_path = './Pods/SwiftLint/swiftlint'
