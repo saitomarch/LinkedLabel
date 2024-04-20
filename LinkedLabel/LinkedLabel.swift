@@ -14,7 +14,6 @@
  limitations under the License.
  */
 
-
 import UIKit
 
 /// LinkedLabel is a label which supports hyperlink.
