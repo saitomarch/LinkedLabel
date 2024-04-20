@@ -1,8 +1,10 @@
 disabled_rules:
   - force_cast
   - trailing_whitespace
+included:
+  - LinkedLabel
 excluded:
-  - Pods/
+  - Pods
   - Carthage
   - vendor
 line_length:
@@ -19,6 +21,7 @@ identifier_name:
   excluded:
     - id
     - URL
+    - url
     - idx
     - hex
     - row
