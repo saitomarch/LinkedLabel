@@ -14,7 +14,6 @@
  limitations under the License.
  */
 
-
 import Foundation
 
 /// Link object with text for `LinkedLabel`
